@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonCard component snapshot 1`] = `
+<div
+  style={
+    Object {
+      "background": "blue",
+    }
+  }
+>
+  <h2>
+    bob
+  </h2>
+  <img
+    src="url"
+  />
+</div>
+`;
