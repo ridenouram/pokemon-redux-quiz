@@ -1,7 +1,8 @@
 import React from 'react';
+import AllPokemon from '../containers/AllPokemon';
 
 export default function App() {
   return (
-    <h1>Hi</h1>
+    <AllPokemon />
   );
 }
