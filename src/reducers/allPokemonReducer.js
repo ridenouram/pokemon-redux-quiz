@@ -3,7 +3,8 @@ import { ALL_FETCH, ALL_FETCH_LOADING, ALL_FETCH_ERROR } from '../actions/listAc
 const initialState = {
   loading: false,
   error: null,
-  pokemonArr: []
+  pokemonArr: [],
+  page: 1
 };
 
 export default function reducer(state = initialState, action) {

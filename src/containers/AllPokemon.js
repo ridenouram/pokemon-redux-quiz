@@ -12,12 +12,12 @@ class AllPokemon extends PureComponent {
     pokemonArr: PropTypes.array.isRequired,
     error: PropTypes.object,
     loading: PropTypes.bool.isRequired,
-    page: PropTypes.string.isRequired
+    page: PropTypes.string
   }
 
 
   componentDidMount() {
-    console.log('heres the page', this.props.page);
+    console.log(this.props.page);
     this.props.fetch(parseInt(this.props.page, 10));
   }
 
@@ -29,7 +29,7 @@ class AllPokemon extends PureComponent {
     }
     return (
     <>
-      <Paging currentPage={(parseInt(this.props.page, 10))} />
+      <Paging currentPage={((parseInt(this.props.page, 10)) || 1)} />
       <PokemonList pokemonArr={this.props.pokemonArr} />
     </>
     );
