@@ -1,10 +1,11 @@
-import { SINGLE_FETCH_LOADING, SINGLE_FETCH, SINGLE_FETCH_ERROR } from "../actions/detailActions";
+import { SINGLE_FETCH_LOADING, SINGLE_FETCH, SINGLE_FETCH_ERROR } from '../actions/detailActions';
 
 
 const initialState = {
   loading: false,
   error: null,
-  pokemon: {}
+  pokemon: {},
+  id: ''
 };
 
 export default function reducer(state = initialState, action) {
@@ -19,3 +20,4 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
+
