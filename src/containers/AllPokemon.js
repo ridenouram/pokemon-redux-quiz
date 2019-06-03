@@ -4,36 +4,47 @@ import { connect } from 'react-redux';
 import { selectAllPokemon, selectAllPokemonError, selectAllPokemonLoading } from '../selectors/allPokemonSelectors';
 import PokemonList from '../components/allPokemon/PokemonList';
 import { fetchAllPokemon } from '../actions/listActions';
+import Paging from '../components/allPokemon/Paging';
 
 class AllPokemon extends PureComponent {
   static propTypes = {
     fetch: PropTypes.func.isRequired,
     pokemonArr: PropTypes.array.isRequired,
     error: PropTypes.object,
-    loading: PropTypes.bool.isRequired
+    loading: PropTypes.bool.isRequired,
+    page: PropTypes.string.isRequired
   }
 
+
   componentDidMount() {
-    this.props.fetch();
+    this.props.fetch(parseInt(this.props.page, 10));
   }
+
+
 
   render() {
     if(this.props.loading) {
       return <h1>Pokemon are loading</h1>;
     }
-    return <PokemonList pokemonArr={this.props.pokemonArr} />;
+    return (
+    <>
+      <Paging currentPage={(parseInt(this.props.page, 10))} />
+      <PokemonList pokemonArr={this.props.pokemonArr} />
+    </>
+    );
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, props) => ({
   pokemonArr: selectAllPokemon(state),
   error: selectAllPokemonError(state),
-  loading: selectAllPokemonLoading(state)
+  loading: selectAllPokemonLoading(state),
+  page: props.match.params.page
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetch() {
-    dispatch(fetchAllPokemon());
+  fetch(page) {
+    dispatch(fetchAllPokemon(page));
   }
 });
 

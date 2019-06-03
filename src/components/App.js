@@ -11,10 +11,10 @@ import {
 export default function App() {
   return (
     <Router>
-      <Link to="/">All Pokemon</Link>
+      <Link to="/1">All Pokemon</Link>
       <Switch>
-        <Route exact path="/" component={AllPokemon} />
-        <Route path="/:id" component={PokemonDetail} />
+        <Route exact path="/:page" component={AllPokemon} />
+        <Route path="/detail/:id" component={PokemonDetail} />
       </Switch>
     </Router>
   );

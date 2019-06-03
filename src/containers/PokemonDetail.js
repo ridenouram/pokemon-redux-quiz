@@ -14,6 +14,8 @@ class PokemonDetail extends PureComponent {
     id: PropTypes.string.isRequired
   };
 
+  
+
   componentDidMount() {
     this.props.fetch(this.props.id);
   }

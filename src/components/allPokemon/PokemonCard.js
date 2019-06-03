@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function PokemonCard({ name, img, color, id }) {
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/detail/${id}`}>
       <div style={{ background: color }}>
         <h2>{name}</h2>
         <img src={img} />
