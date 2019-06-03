@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullPokemon component snapshot 1`] = `
+<section>
+  <h1 />
+  <img />
+  <div>
+    <h3>
+      Attack: 
+    </h3>
+    <h3>
+      Defense: 
+    </h3>
+    <h3>
+      HP: 
+    </h3>
+  </div>
+  <a>
+    More Information
+  </a>
+</section>
+`;
