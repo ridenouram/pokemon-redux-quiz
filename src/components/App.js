@@ -17,6 +17,7 @@ function Home() {
 export default function App() {
   return (
     <Router>
+      <h1>So Many Pokeman</h1>
       <Switch>
         <Route exact path = "/" component = {Home} />
         <Route exact path="/:page" component={AllPokemon} />
