@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-  switch(action.type){
+  switch(action.type) {
     case ALL_FETCH_LOADING:
       return { ...state, loading: true }; 
     case ALL_FETCH:
