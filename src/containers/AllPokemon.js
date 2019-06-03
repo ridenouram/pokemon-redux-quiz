@@ -17,6 +17,7 @@ class AllPokemon extends PureComponent {
 
 
   componentDidMount() {
+    console.log('heres the page', this.props.page);
     this.props.fetch(parseInt(this.props.page, 10));
   }
 

@@ -20,11 +20,11 @@ function Paging({ currentPage }) {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <Link to={`/${prevPage}`}>
+      <Link to={`/${prevPage}`} onClick={() => window.location.refresh()}>
         <button style={{ height: '20px' }}> Prev </button>
       </Link>
       <p>{currentPage} of 81</p>
-      <Link to={`/${nextPage}`}>
+      <Link to={`/${nextPage}`} onClick={() => window.location.refresh()}>
         <button style={{ height: '20px' }}> Next </button>
       </Link>
     </div>
