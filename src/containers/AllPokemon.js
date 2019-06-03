@@ -36,11 +36,12 @@ class AllPokemon extends PureComponent {
   }
 }
 
+
 const mapStateToProps = (state, props) => ({
   pokemonArr: selectAllPokemon(state),
   error: selectAllPokemonError(state),
   loading: selectAllPokemonLoading(state),
-  page: props.match.params.page
+  page: props.match.params.page 
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -12,7 +12,7 @@ function PokemonList({ pokemonArr }) {
   });
 
   return (
-    <ul>
+    <ul style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
       {mappedPokemon}
     </ul>
   );
