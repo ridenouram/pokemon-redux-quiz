@@ -29,7 +29,7 @@ class AllPokemon extends PureComponent {
     }
     return (
     <>
-      <Paging currentPage={((parseInt(this.props.page, 10)) || 1)} />
+      <Paging currentPage={(parseInt(this.props.page, 10))} />
       <PokemonList pokemonArr={this.props.pokemonArr} />
     </>
     );

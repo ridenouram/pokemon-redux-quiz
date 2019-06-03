@@ -11,10 +11,9 @@ import {
 export default function App() {
   return (
     <Router>
-      <Link to="/" onClick={() => window.location.refresh()}>All Pokemon</Link>
+      <Link to="/1">All Pokemon</Link>
       <Switch>
-        <Route exact path="/" component={AllPokemon} />
-        <Route path="/:page" component={AllPokemon} />
+        <Route exact path="/:page" component={AllPokemon} />
         <Route path="/detail/:id" component={PokemonDetail} />
       </Switch>
     </Router>
