@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createComment } from '../../actions/commentActions';
 
-export default class CommentForm extends PureComponent {
+class CommentForm extends PureComponent {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired
@@ -11,12 +11,12 @@ export default class CommentForm extends PureComponent {
 
   state = {
     comment: '',
-    isbn: this.props.id
+    id: this.props.id
   };
 
   handleSubmit = event => {
     event.preventDefault();
-
+    console.log('in handle submit. id: ', this.state.id);
     this.props.onSubmit(this.state.id, this.state.comment);
     this.setState({ comment: '' });
   }
@@ -27,17 +27,25 @@ export default class CommentForm extends PureComponent {
 
   render() {
     return (
+      <>
+      <h1>LEAVE A COMMENT</h1>
       <form onSubmit={this.handleSubmit}>
         <input type="text" value={this.state.comment} onChange={this.updateComment} />
         <button>Submit</button>
       </form>
+      </>
     );
   }
 }
 
+// const mapStateToProps = (state, props) => ){
+
+// }
+
 const mapDispatchToProps = (dispatch) => ({
-  onSubmit(isbn, comment) {
-    dispatch(createComment(isbn, comment));
+  onSubmit(id, comment) {
+    console.log('in onSubmit. id: ', id);
+    dispatch(createComment(id, comment));
   }
 });
 

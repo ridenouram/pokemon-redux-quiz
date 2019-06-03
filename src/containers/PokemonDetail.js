@@ -6,6 +6,7 @@ import { fetchSinglePokemon } from '../actions/detailActions';
 import { selectOnePokemon, selectOnePokemonError, selectOnePokemonLoading } from '../selectors/pokemonDetailSelectors';
 import { getComments } from '../selectors/commentSelectors';
 import Comments from '../components/pokemonDetail/Comments';
+import CommentForm from '../components/pokemonDetail/CommentForm';
 
 class PokemonDetail extends PureComponent {
   static propTypes = {
@@ -29,8 +30,9 @@ class PokemonDetail extends PureComponent {
     <>
     <FullPokemon pokemon={this.props.pokemon} />
     <Comments comments={this.props.comments} />
+    <CommentForm id={this.props.id} />
     </>
-    )
+    );
   }
 }
 

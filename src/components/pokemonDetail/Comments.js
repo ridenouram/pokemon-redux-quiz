@@ -12,9 +12,12 @@ function Comments({ comments }) {
   });
 
   return (
+    <>
+    <h1>COMMENTS</h1>
     <ul>
       {commentList}
     </ul>
+    </>
   );
 }
 
