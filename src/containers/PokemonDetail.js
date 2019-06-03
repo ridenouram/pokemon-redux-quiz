@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import FullPokemon from '../components/pokemonDetail/FullPokemon';
-import { fetchSinglePokemon } from '../actions/listActions';
+import { fetchSinglePokemon } from '../actions/detailActions';
 import { selectOnePokemon, selectOnePokemonError, selectOnePokemonLoading } from '../selectors/pokemonDetailSelectors';
 
 class PokemonDetail extends PureComponent {
