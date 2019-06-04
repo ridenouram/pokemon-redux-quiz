@@ -21,6 +21,12 @@ class AllPokemon extends PureComponent {
     this.props.fetch(parseInt(this.props.page, 10));
   }
 
+  componentDidUpdate(prevProps) {
+    if(prevProps.page !== this.props.page) {
+      console.log(this.props.page);
+      this.props.fetch(parseInt(this.props.page, 10));
+    }
+  }
 
 
   render() {
