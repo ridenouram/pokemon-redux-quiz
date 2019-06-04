@@ -7,7 +7,6 @@ import { selectOnePokemon, selectOnePokemonError, selectOnePokemonLoading } from
 import { getComments } from '../selectors/commentSelectors';
 import Comments from '../components/pokemonDetail/Comments';
 import CommentForm from '../components/pokemonDetail/CommentForm';
-import { Link } from 'react-router-dom';
 
 class PokemonDetail extends PureComponent {
   static propTypes = {
@@ -29,7 +28,6 @@ class PokemonDetail extends PureComponent {
     }
     return (
     <>
-    <Link to="/1">All Pokemon</Link> 
     <FullPokemon pokemon={this.props.pokemon} />
     <Comments comments={this.props.comments} />
     <CommentForm id={this.props.id} />

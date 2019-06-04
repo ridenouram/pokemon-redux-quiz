@@ -8,18 +8,19 @@ import {
   Link
 } from 'react-router-dom';
 
-function Home() {
-  return (
-    <Link to="/1">All Pokemon</Link>
-  );
-}
+// function Home() {
+//   return (
+//     <Link to="/1">All Pokemon</Link>
+//   );
+// }
 
 export default function App() {
   return (
     <Router>
       <h1>So Many Pokeman</h1>
+      <Link to="/1">All Pokemon</Link>
       <Switch>
-        <Route exact path = "/" component = {Home} />
+        <Route exact path = "/" component = {AllPokemon} />
         <Route exact path="/:page" component={AllPokemon} />
         <Route path="/detail/:id" component={PokemonDetail} />
       </Switch>

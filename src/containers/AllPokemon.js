@@ -47,7 +47,7 @@ const mapStateToProps = (state, props) => ({
   pokemonArr: selectAllPokemon(state),
   error: selectAllPokemonError(state),
   loading: selectAllPokemonLoading(state),
-  page: props.match.params.page 
+  page: props.match.params.page || 1
 });
 
 const mapDispatchToProps = dispatch => ({
